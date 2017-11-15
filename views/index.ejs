@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include head.ejs %>
+</head>
+
+<body>
+  <% include header.ejs %>
+  <div class="py-5 bg-primary text-light w-100">
+    <div class="container">
+      <div class="row">
+        <div class="align-self-center col-md-6 text-white">
+          <h1 class="text-center text-md-left display-3">HIP Project</h1>
+          <p class="">Human Information Processing Project
+            <br>การทดลองเกี่ยวกับการจดจำโดยจะมีวิธีการทดลองคือ
+            <br>1) จะมีภาพจำนวน 10 ภาพแสดงขึ้นมาให้จำในตอนแรก
+            <br>2) จะมีภาพมาจำนวน 4 ภาพ และให้เลือกว่าภาพใดอยู่ใน 10 ภาพแรกที่แสดงขึ้นมา</p>
+        </div>
+
+        <div class="col-md-6" id="book">
+          <div class="card">
+            <div class="card-body p-5">
+              <h3 class="pb-3">กรุณากรอกข้อมูลพื้นฐาน</h3>
+
+              <form action="https://formspree.io/YOUREMAILHERE">
+                <div class="form-group"> <label>คณะ</label>
+                  <input class="form-control" placeholder="คณะวิทยาศาสตร์"> </div>
+                <div class="form-group"> <label>อายุ</label>
+                  <input type="number" class="form-control" placeholder="20"> </div>
+                <div class="form-group"> <label>เพศ</label> <select name="cars" class="form-control">
+                      <option value="volvo">ชาย</option>
+                      <option value="saab">หญิง</option>
+                    </select> </div>
+              </form>
+
+              <button type="submit" class="btn mt-2 btn-outline-dark">เริ่มการทดสอบ</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <% include footer.ejs %>
+  <% include script.ejs %>
+</body>
+
+</html>
