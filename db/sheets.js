@@ -6,16 +6,16 @@ const sheet = 'Sheet1!';
 const range = sheet+'A2:E2';
 const sheets = google.sheets('v4');
 const valueInputOption = "RAW";
-exports.testAppend = (callback) => {
+exports.submit = (values, callback) => {
     authentication.authenticate().then((auth) => {
-        var values = [
-            [
-                "วิทยาศาสตร์",
-                "20",
-                "ชาย"
-            ]
-        // Additional rows ...
-        ];
+        // var values = [
+        //     [
+        //         "วิทยาศาสตร์",
+        //         "20",
+        //         "ชาย"
+        //     ]
+        // // Additional rows ...
+        // ];
         var body = {
             values: values
         };

@@ -13,10 +13,10 @@ var sheets = require('../db/sheets');
 
 // Authentication and Authorization Middleware
 var auth = function(req, res, next) {
-  if (req.session.admin)
+  if (req.session.login)
     return next();
   else
-    return res.redirect('/admin/');
+    return res.redirect('/');
 };
 
 router.get('/test', function(req, res, next) {
@@ -26,6 +26,7 @@ router.get('/test', function(req, res, next) {
     }
   });
 });
+
 var variables = require('../db/variables');
 var payload = {
   "page": "ล็อคอิน",
@@ -39,21 +40,18 @@ var payload = {
     // 1, 2
   ],
   "images": variables.images,
+  "answers_images": variables.answers_images,
   "answers": variables.answers
 };
 
-router.post('/getImage', function(req, res, next) {
+router.post('/getImage', auth, function(req, res, next) {
   var trial_no = req.body.trial_no;  
   res.json({success: true, data: payload.images[trial_no]});
 });
 
-router.get('/getAnswer', function(req, res, next) {
-  res.render('answer.ejs', {answers: payload.answers[0]});
-});
-
-router.post('/answer', function(req, res, next) {
+router.post('/answer', auth, function(req, res, next) {
   var trial_no = req.body.trial_no;  
-  res.render('answer.ejs', {answers: payload.answers[trial_no]});
+  res.render('answer.ejs', { payload: payload, answers_images: payload.answers_images[trial_no], trial_no: trial_no });  
 });
 
 var payloadUpdate = (page) => {
@@ -94,15 +92,56 @@ router.get('/index', function(req, res, next) {
 
 router.get('/logout', function(req, res, next) {
   req.session.destroy();
+  payload = {
+    "page": "ล็อคอิน",
+    "info": {
+      "login": false,
+      "faculty": "",
+      "age": 0,
+      "gender": ""
+    },
+    "trial": [
+      // 1, 2
+    ],
+    "images": variables.images,
+    "answers_images": variables.answers_images,
+    "answers": variables.answers
+  };
   res.redirect('/');
 });
 
-router.get('/trial', payloadUpdate('การทดสอบ'), function(req, res, next) {
+router.get('/trial', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
   res.render('trial.ejs', { payload: payload });
 });
 
-router.get('/trial/:number', payloadUpdate('การทดสอบ'), function(req, res, next) {
-  res.render('instruction.ejs', { payload: payload, trial_no: req.params.number-1 });
+router.get('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+  res.render('image-changing.ejs', { payload: payload, trial_no: req.params.number-1 });
+});
+
+router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+  var answer = req.body.answer;
+  var trial_no = req.params.number;
+  payload.trial.push(trial_no);
+  var values = [ [
+      req.session.faculty,
+      req.session.age,
+      req.session.gender,
+      parseInt(trial_no)+1
+    ]
+  ]
+  if(answer == payload.answers[trial_no]) {
+    values[0].push('ถูก');
+    sheets.submit(values, (err) => {
+      if(!err)
+        res.send(true);
+    });
+  } else {
+    values[0].push('ผิด');
+    sheets.submit(values, (err) => {
+      if(!err)
+        res.send(false);
+    });
+  }
 });
 
 router.get('/instruction', payloadUpdate('การทดสอบ'), function(req, res, next) {
@@ -113,8 +152,5 @@ router.get('/image-changing', payloadUpdate('การทดสอบ'), functio
   res.render('image-changing.ejs', { payload: payload, trial_no: 0 });
 });
 
-router.get('/answer', payloadUpdate('การทดสอบ'), function(req, res, next) {
-  res.render('answer.ejs', { payload: payload });
-});
 
 module.exports = router;

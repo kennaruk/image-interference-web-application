@@ -44,8 +44,8 @@
     $('#trial-4'), $('#trial-5')];
 
     <% payload.trial.forEach((index) => { %> 
-      aTrial[<%=index%>-1].attr('href', '#');
-      aTrial[<%=index%>-1].attr('class', 'btn btn-dark w-100');
+      aTrial[<%=index%>].attr('href', '#');
+      aTrial[<%=index%>].attr('class', 'btn btn-dark w-100');
     <% }); %>
   });
   </script>
