@@ -152,5 +152,9 @@ router.get('/image-changing', payloadUpdate('การทดสอบ'), functio
   res.render('image-changing.ejs', { payload: payload, trial_no: 0 });
 });
 
+router.post('/image', function(req, res, next) {
+  var imgsrc = req.body.imgsrc;
+  res.render('images.ejs', {imgsrc: imgsrc})
+});
 
 module.exports = router;

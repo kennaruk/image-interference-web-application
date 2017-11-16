@@ -1,19 +1,19 @@
 
-<div class="row bg-primary">
-  <div class="col-md-12 p-3 bg-dark">
+<div class="row bg-primary" >
+  <div class="col-md-12 p-3 bg-dark" style="height:10vh;">
     <h1 class="text-white text-center">ภาพใดอยู่ในภาพข้างต้น</h1>
   </div>
 </div>
 
-<div class="row" style="height:50vh;">
+<div class="row" style="height:40vh;">
   <div class="bg-secondary col-md-3 p-3"> <br> <br> <br> <br>
-    <img id="answer-1" class="d-block img-fluid img-thumbnail mx-auto h-50 w-100" src="<%= answers_images[0] %>"> </div>
+    <img id="answer-1" class="d-block img-fluid img-thumbnail mx-auto h-50 w-75" src="<%= answers_images[0] %>"> </div>
   <div class="bg-secondary col-md-3 p-3"> <br> <br> <br> <br>
-    <img id="answer-2" class="d-block img-fluid img-thumbnail mx-auto h-50 w-100" src="<%= answers_images[1] %>"> </div>
+    <img id="answer-2" class="d-block img-fluid img-thumbnail mx-auto h-50 w-75" src="<%= answers_images[1] %>"> </div>
   <div class="bg-secondary col-md-3 p-3"> <br> <br> <br> <br>
-    <img id="answer-3" class="d-block img-fluid img-thumbnail mx-auto h-50 w-100" src="<%= answers_images[2] %>"> </div>
+    <img id="answer-3" class="d-block img-fluid img-thumbnail mx-auto h-50 w-75" src="<%= answers_images[2] %>"> </div>
   <div class="bg-secondary col-md-3 p-3"> <br> <br> <br> <br>
-    <img id="answer-4" class="d-block img-fluid img-thumbnail mx-auto h-50 w-100" src="<%= answers_images[3] %>"> </div>
+    <img id="answer-4" class="d-block img-fluid img-thumbnail mx-auto h-50 w-75" src="<%= answers_images[3] %>"> </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -30,7 +30,7 @@
     sendAnswer(4);
   });
   function sendAnswer(choice) {
-    
+
     swal("รอสักครู่ระบบกำลังตรวจสอบคำตอบ", {
       button: false,
     });
