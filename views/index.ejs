@@ -23,18 +23,19 @@
             <div class="card-body p-5">
               <h3 class="pb-3">กรุณากรอกข้อมูลพื้นฐาน</h3>
 
-              <form action="https://formspree.io/YOUREMAILHERE">
+              <!-- <form action="https://formspree.io/YOUREMAILHERE"> -->
                 <div class="form-group"> <label>คณะ</label>
-                  <input class="form-control" placeholder="คณะวิทยาศาสตร์"> </div>
+                  <input id="input-faculty" class="form-control" placeholder="คณะวิทยาศาสตร์"> </div>
                 <div class="form-group"> <label>อายุ</label>
-                  <input type="number" class="form-control" placeholder="20"> </div>
-                <div class="form-group"> <label>เพศ</label> <select name="cars" class="form-control">
-                      <option value="volvo">ชาย</option>
-                      <option value="saab">หญิง</option>
+                  <input id="input-age" type="number" class="form-control" placeholder="20"> </div>
+                <div class="form-group"> <label>เพศ</label> 
+                    <select name="gender" class="form-control">
+                      <option value="ชาย">ชาย</option>
+                      <option value="หญิง">หญิง</option>
                     </select> </div>
-              </form>
+              <!-- </form> -->
 
-              <button type="submit" class="btn mt-2 btn-outline-dark">เริ่มการทดสอบ</button>
+              <button type="submit" class="btn mt-2 btn-outline-dark" id="start-btn">เริ่มการทดสอบ</button>
             </div>
           </div>
         </div>
@@ -44,6 +45,31 @@
   </div>
   <% include footer.ejs %>
   <% include script.ejs %>
+  <script>
+    $(() => {
+
+      $('#start-btn').click(()=>{
+         $.ajax({
+          url: '/login',
+          type: 'POST',
+          data: {
+            faculty: $('#input-faculty').val(),
+            age: $('#input-age').val(),
+            gender: $('select[name="gender"]').val()
+          },
+          success: (payload) => {
+            if(payload.success)
+              swal("เรียบร้อย","เริ่มการทดสอบได้ การทดสอบจะแบ่งเป็น 5 ส่วน","success").then(() => {
+                window.location.href = '/trial';
+              });
+            else
+              swal("ผิดพลาด",payload.msg,"warning");
+          }
+        });
+      })
+
+    });
+  </script>
 </body>
 
 </html>

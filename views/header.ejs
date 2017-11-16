@@ -5,15 +5,37 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">การทดสอบ</a>
+            <% if(payload.page === 'ล็อคอิน') { %>
+              <a class="nav-link text-white">หน้าแรก</a>
+            <% } else { %>
+              <a class="nav-link" href="/">หน้าแรก</a>         
+            <% } %>   
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">ผู้จัดทำ
+            <% if(payload.page === 'การทดสอบ') { %>
+              <a class="nav-link text-white">การทดสอบ</a>
+            <% } else { %>
+              <a class="nav-link" href="/trial">การทดสอบ</a>         
+            <% } %>   
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ผู้จัดทำ
               <br>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">ไม่มีข้อมูลผู้ทดสอบ</a>
+          
+            <% if(payload.info.login) { %> 
+              <li class="nav-item">
+                <a class="nav-link text-white"><%=payload.info.faculty%> อายุ <%=payload.info.age%> เพศ <%=payload.info.gender%></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/logout">ลงชื่อออก</a>                     
+              </li>
+            <% } else { %> 
+              <li class="nav-item">
+                  <a class="nav-link">ไม่มีข้อมูลผู้ทดสอบ</a>                  
+              </li>
+            <% } %>
           </li>
         </ul>
         <form class="form-inline m-0 bg-secondary"></form>
