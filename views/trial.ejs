@@ -11,33 +11,44 @@
     <div class="container">
       <div class="row">
         <div class="bg-secondary col-md-12 p-3">
-          <a class="btn btn-primary w-100" href="">การทดลองที่ 1</a>
+          <a id="trial-1" class="btn btn-primary w-100" href="/trial/1">การทดลองที่ 1</a>
         </div>
       </div>
       <div class="row">
         <div class="bg-secondary col-md-12 p-3">
-          <a class="btn btn-primary w-100" href="">การทดลองที่ 2</a>
+          <a id="trial-2" class="btn btn-primary w-100" href="/trial/2">การทดลองที่ 2</a>
         </div>
       </div>
       <div class="row">
         <div class="bg-secondary col-md-12 p-3">
-          <a class="btn btn-primary w-100" href="">การทดลองที่ 3</a>
+          <a id="trial-3" class="btn btn-primary w-100" href="/trial/3">การทดลองที่ 3</a>
         </div>
       </div>
       <div class="row">
         <div class="bg-secondary col-md-12 p-3">
-          <a class="btn btn-primary w-100" href="">การทดลองที่ 4</a>
+          <a id="trial-4" class="btn btn-primary w-100" href="/trial/4">การทดลองที่ 4</a>
         </div>
       </div>
       <div class="row">
         <div class="bg-secondary col-md-12 p-3">
-          <a class="btn btn-primary w-100" href="">การทดลองที่ 5</a>
+          <a id="trial-5" class="btn btn-primary w-100" href="/trial/5">การทดลองที่ 5</a>
         </div>
       </div>
     </div>
   </div>
   <% include footer.ejs %>
   <% include script.ejs %>
+  <script>
+  $(() => {
+    var aTrial = [$('#trial-1'), $('#trial-2'), $('#trial-3'),
+    $('#trial-4'), $('#trial-5')];
+
+    <% payload.trial.forEach((index) => { %> 
+      aTrial[<%=index%>-1].attr('href', '#');
+      aTrial[<%=index%>-1].attr('class', 'btn btn-dark w-100');
+    <% }); %>
+  });
+  </script>
 </body>
 
 </html>

@@ -26,7 +26,7 @@ router.get('/test', function(req, res, next) {
     }
   });
 });
-
+var variables = require('../db/variables');
 var payload = {
   "page": "ล็อคอิน",
   "info": {
@@ -36,9 +36,25 @@ var payload = {
     "gender": ""
   },
   "trial": [
-
-  ]
+    // 1, 2
+  ],
+  "images": variables.images,
+  "answers": variables.answers
 };
+
+router.post('/getImage', function(req, res, next) {
+  var trial_no = req.body.trial_no;  
+  res.json({success: true, data: payload.images[trial_no]});
+});
+
+router.get('/getAnswer', function(req, res, next) {
+  res.render('answer.ejs', {answers: payload.answers[0]});
+});
+
+router.post('/answer', function(req, res, next) {
+  var trial_no = req.body.trial_no;  
+  res.render('answer.ejs', {answers: payload.answers[trial_no]});
+});
 
 var payloadUpdate = (page) => {
   return function(req, res, next) {
@@ -82,20 +98,23 @@ router.get('/logout', function(req, res, next) {
 });
 
 router.get('/trial', payloadUpdate('การทดสอบ'), function(req, res, next) {
-  console.log(payload);
   res.render('trial.ejs', { payload: payload });
 });
 
-router.get('/instruction', function(req, res, next) {
-  res.render('instruction.ejs', { title: 'Express' });
+router.get('/trial/:number', payloadUpdate('การทดสอบ'), function(req, res, next) {
+  res.render('instruction.ejs', { payload: payload, trial_no: req.params.number-1 });
 });
 
-router.get('/image-changing', function(req, res, next) {
-  res.render('image-changing.ejs', { title: 'Express' });
+router.get('/instruction', payloadUpdate('การทดสอบ'), function(req, res, next) {
+  res.render('instruction.ejs', { payload: payload });
 });
 
-router.get('/answer', function(req, res, next) {
-  res.render('answer.ejs', { title: 'Express' });
+router.get('/image-changing', payloadUpdate('การทดสอบ'), function(req, res, next) {
+  res.render('image-changing.ejs', { payload: payload, trial_no: 0 });
+});
+
+router.get('/answer', payloadUpdate('การทดสอบ'), function(req, res, next) {
+  res.render('answer.ejs', { payload: payload });
 });
 
 module.exports = router;

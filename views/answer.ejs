@@ -1,36 +1,16 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <% include head.ejs %>
-</head>
-
-<body>
-  <% include header.ejs %>
-  <div class="py-5 bg-primary text-light w-100 h-65" style="">
-    <div class="container">
-      <div class="row bg-primary">
-        <div class="col-md-12 p-3 bg-dark">
-          <h1 class="text-white text-center">ภาพใดอยู่ในภาพข้างต้น</h1>
-        </div>
-      </div>
-      <div class="row" style="height:50vh;">
-        <div class="bg-secondary col-md-3 p-3">
-          <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg"> </div>
-        <div class="bg-secondary col-md-3 p-3">
-          <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg"> </div>
-        <div class="bg-secondary col-md-3 p-3">
-          <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg"> </div>
-        <div class="bg-secondary col-md-3 p-3">
-          <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg"> </div>
+<div class="container">
+    <div class="row bg-primary">
+      <div class="col-md-12 p-3 bg-dark">
+        <h1 class="text-white text-center">ภาพใดอยู่ในภาพข้างต้น</h1>
       </div>
     </div>
-  </div>
-  <% include footer.ejs %>
-  <% include script.ejs %>
-  <script type="text/javascript" src="/js/greensock/plugins/CSSPlugin.min.js"></script>
-  <script type="text/javascript" src="/js/greensock/TweenLite.min.js"></script>
-  <script type="text/javascript" src="/js/greensock/TweenMax.min.js"></script>
-</body>
-
-</html>
+<div class="row" style="height:50vh;">
+  <div class="bg-secondary col-md-3 p-3">
+    <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers[0] %>"> </div>
+  <div class="bg-secondary col-md-3 p-3">
+    <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers[1] %>"> </div>
+  <div class="bg-secondary col-md-3 p-3">
+    <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers[2] %>"> </div>
+  <div class="bg-secondary col-md-3 p-3">
+    <img class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers[3] %>"> </div>
+</div>
