@@ -15,14 +15,14 @@ exports.images = [
      "/images/questions/03/10.JPG"],
 
     ["https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
+    "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg",
+    "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
     "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg"],
-    ["https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
-    "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg"]
 
     ["/images/questions/05/01.jpg", "/images/questions/05/02.jpg", "/images/questions/05/03.jpg",
      "/images/questions/05/04.jpg", "/images/questions/05/05.jpg", "/images/questions/05/06.jpg",
      "/images/questions/05/07.jpg", "/images/questions/05/08.jpg", "/images/questions/05/09.jpg",
-     "/images/questions/05/10.jpg"],
+     "/images/questions/05/10.jpg"]
 ]
 
 exports.answers_images = [
@@ -35,13 +35,13 @@ exports.answers_images = [
     ["https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
     "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg",
     "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
-    "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg"],
-    ["https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
     "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg",
     "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
-    "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg"]
+    "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg",
+    "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
+    "https://static.pexels.com/photos/126407/pexels-photo-126407.jpeg"],
 
-    ["/images/questions/05/11.jpg", "/images/questions/05/13.jpg", "/images/questions/05/12.jpg", "/images/questions/05/08.jpg"],
+    ["/images/questions/05/11.jpg", "/images/questions/05/13.jpg", "/images/questions/05/12.jpg", "/images/questions/05/08.jpg"]
     
 ]
 
