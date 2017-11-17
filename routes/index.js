@@ -19,6 +19,12 @@ var auth = function(req, res, next) {
     return res.redirect('/');
 };
 
+var indexAuth = function(req, res, next) {
+  if(req.session.login)
+    res.redirect('/trial');
+  else
+    return next();
+}
 router.get('/test', function(req, res, next) {
   sheets.testAppend((err) => {
     if(!err) {
@@ -66,7 +72,7 @@ var payloadUpdate = (page) => {
 }
 
 /* GET home page. */
-router.get('/', payloadUpdate('ล็อคอิน'), function(req, res, next) {
+router.get('/', payloadUpdate('ล็อคอิน'),indexAuth, function(req, res, next) {
   res.render('index.ejs', {payload: payload});
 });
 
