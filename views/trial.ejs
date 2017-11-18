@@ -7,38 +7,40 @@
 
 <body>
   <% include header.ejs %>
+
   <div class="py-5 bg-primary text-light w-100 h-75">
-      <div class="col-md-12 p-3 bg-primary" style="height:10vh;"> 
-          <h1 class="text-white text-center">เลือกการทดลอง</h1>          
-      </div>                        
-    <div class="container">
-      <div class="row" style="height:10vh;">
-        <div class="bg-secondary col-md-12 p-3">
-          <a id="trial-1" class="btn btn-primary w-100" href="/trial/1">การทดลองที่ 1</a>
-        </div>
+  <div class="container">
+
+  <div class="row" style="height:60vh;">
+      <div class="align-self-center col-md-6 text-white">
+        <h1 class="text-white text-center">การทดลอง การจดจำภาพ</h1>                    
+        <p class="">
+          <br>วิธีการทดลอง
+          <br>1) จะมีภาพแสดงขึ้นมาให้จำในตอนแรก
+          <br>2) จะมีภาพแสดงขึ้นมา 4 ภาพเพื่อให้เลือกว่าภาพใด อยู่ในภาพที่แสดงในตอนแรก
+        </p>
+        <div class=" col-md-12 p-3">
+            <a id="trial-example" class="btn btn-secondary w-100" href="/trial/example">ทดลองทดสอบ</a>
+          </div>
       </div>
-      <div class="row" style="height:10vh;">
-        <div class="bg-secondary col-md-12 p-3">
-          <a id="trial-2" class="btn btn-primary w-100" href="/trial/2">การทดลองที่ 2</a>
-        </div>
+      
+      <div class="col-md-6">
+          <div class="col-md-12 p-3 bg-primary"> 
+              <h1 class="text-white text-center">เลือกการทดลอง</h1>          
+          </div>                        
+          <% for(var i = 1, n = 6; i <= n; i++) { %>
+            <div class="row">
+              <div class="bg-secondary col-md-12 p-3">
+                <a id="trial-<%=i%>" class="btn btn-primary w-100" href="/trial/<%=i%>">การทดลองที่ <%=i%></a>
+              </div>
+            </div>
+          <% } %>
       </div>
-      <div class="row" style="height:10vh;">
-        <div class="bg-secondary col-md-12 p-3">
-          <a id="trial-3" class="btn btn-primary w-100" href="/trial/3">การทดลองที่ 3</a>
-        </div>
-      </div>
-      <div class="row" style="height:10vh;">
-        <div class="bg-secondary col-md-12 p-3">
-          <a id="trial-4" class="btn btn-primary w-100" href="/trial/4">การทดลองที่ 4</a>
-        </div>
-      </div>
-      <div class="row" style="height:10vh;">
-        <div class="bg-secondary col-md-12 p-3">
-          <a id="trial-5" class="btn btn-primary w-100" href="/trial/5">การทดลองที่ 5</a>
-        </div>
-      </div>
-    </div>
   </div>
+
+  </div>
+  </div>
+
   <% include footer.ejs %>
   <% include script.ejs %>
   <script>

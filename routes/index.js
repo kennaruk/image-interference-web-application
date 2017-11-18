@@ -116,15 +116,19 @@ router.get('/logout', function(req, res, next) {
   res.redirect('/');
 });
 
-router.get('/trial', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+//TODO: , auth
+router.get('/trial', payloadUpdate('การทดสอบ'), function(req, res, next) {
   res.render('trial.ejs', { payload: payload });
 });
 
-router.get('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+
+//TODO: , auth
+router.get('/trial/:number', payloadUpdate('การทดสอบ'), function(req, res, next) {
   res.render('image-changing.ejs', { payload: payload, trial_no: req.params.number-1 });
 });
 
-router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+//TODO: , auth
+router.post('/trial/:number', payloadUpdate('การทดสอบ'), function(req, res, next) {
   var answer = req.body.answer;
   var trial_no = req.params.number;
   payload.trial.push(trial_no);
