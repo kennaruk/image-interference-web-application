@@ -20,7 +20,7 @@
           <br>2) จะมีภาพแสดงขึ้นมา 4 ภาพเพื่อให้เลือกว่าภาพใด อยู่ในภาพที่แสดงในตอนแรก
         </p>
         <div class=" col-md-12 p-3">
-            <a id="trial-example" class="btn btn-secondary w-100" href="/trial/example">ทดลองทดสอบ</a>
+            <a id="trial-7" class="btn btn-secondary w-100" href="/trial/07">ทดลองทดสอบ</a>
           </div>
       </div>
       
@@ -29,7 +29,7 @@
               <h1 class="text-white text-center">เลือกการทดลอง</h1>          
           </div>                        
           <% for(var i = 1, n = 6; i <= n; i++) { %>
-            <div class="row">
+            <div class="row" style="height:<%=60.0/(n+1)%>vh;">
               <div class="bg-secondary col-md-12 p-3">
                 <a id="trial-<%=i%>" class="btn btn-primary w-100" href="/trial/<%=i%>">การทดลองที่ <%=i%></a>
               </div>
@@ -46,7 +46,7 @@
   <script>
   $(() => {
     var aTrial = [$('#trial-1'), $('#trial-2'), $('#trial-3'),
-    $('#trial-4'), $('#trial-5')];
+    $('#trial-4'), $('#trial-5'), $('#trial-6'), $('#trial-7')];
 
     <% payload.trial.forEach((index) => { %> 
       aTrial[<%=index%>].attr('href', '#');

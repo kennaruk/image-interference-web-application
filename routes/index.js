@@ -72,7 +72,7 @@ var payloadUpdate = (page) => {
 }
 
 /* GET home page. */
-router.get('/', payloadUpdate('ล็อคอิน'),indexAuth, function(req, res, next) {
+router.get('/', payloadUpdate('ล็อคอิน'),indexAuth , function(req, res, next) {
   res.render('index.ejs', {payload: payload});
 });
 
@@ -116,19 +116,15 @@ router.get('/logout', function(req, res, next) {
   res.redirect('/');
 });
 
-//TODO: , auth
-router.get('/trial', payloadUpdate('การทดสอบ'), function(req, res, next) {
+router.get('/trial', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
   res.render('trial.ejs', { payload: payload });
 });
 
-
-//TODO: , auth
-router.get('/trial/:number', payloadUpdate('การทดสอบ'), function(req, res, next) {
+router.get('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
   res.render('image-changing.ejs', { payload: payload, trial_no: req.params.number-1 });
 });
 
-//TODO: , auth
-router.post('/trial/:number', payloadUpdate('การทดสอบ'), function(req, res, next) {
+router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
   var answer = req.body.answer;
   var trial_no = req.params.number;
   payload.trial.push(trial_no);
