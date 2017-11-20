@@ -35,19 +35,19 @@ exports.images = [
 
 exports.answers_images = [
 
-    ["/images/questions/01/04.JPG", "/images/questions/01/11.JPG", "/images/questions/01/12.JPG", "/images/questions/01/13.JPG"],
+    ["/images/questions/01/03.JPG", "/images/questions/01/11.JPG", "/images/questions/01/12.JPG", "/images/questions/01/13.JPG", "/images/questions/15.gif"],
 
-    ["/images/questions/02/11.JPG", "/images/questions/02/01.JPG", "/images/questions/02/12.JPG", "/images/questions/02/13.JPG"],
+    ["/images/questions/02/11.JPG", "/images/questions/02/03.JPG", "/images/questions/02/14.JPG", "/images/questions/02/15.png", "/images/questions/15.gif"],
 
-    ["/images/questions/03/12.JPG", "/images/questions/03/11.JPG", "/images/questions/03/13.JPG", "/images/questions/03/02.JPG"],
+    ["/images/questions/03/12.JPG", "/images/questions/03/11.JPG", "/images/questions/03/13.JPG", "/images/questions/03/02.JPG", "/images/questions/15.gif"],
 
-    ["/images/questions/04/12.JPG", "/images/questions/04/11.JPG", "/images/questions/04/04.JPG", "/images/questions/04/13.JPG"],
+    ["/images/questions/04/12.JPG", "/images/questions/04/11.JPG", "/images/questions/04/04.JPG", "/images/questions/04/13.JPG", "/images/questions/15.gif"],
 
-    ["/images/questions/05/04.JPG", "/images/questions/05/11.JPG", "/images/questions/05/12.JPG", "/images/questions/05/13.JPG"],
+    ["/images/questions/05/04.JPG", "/images/questions/05/11.JPG", "/images/questions/05/12.JPG", "/images/questions/05/13.JPG", "/images/questions/15.gif"],
 
-    ["/images/questions/06/11.JPG", "/images/questions/06/06.JPG", "/images/questions/06/12.JPG", "/images/questions/06/13.JPG"],
+    ["/images/questions/06/11.JPG", "/images/questions/06/04.JPG", "/images/questions/06/12.JPG", "/images/questions/06/13.JPG", "/images/questions/15.gif"],
 
-    ["/images/questions/07/06.JPG", "/images/questions/07/02.JPG", "/images/questions/07/07.JPG", "/images/questions/07/08.JPG"]
+    ["/images/questions/07/06.JPG", "/images/questions/07/02.JPG", "/images/questions/07/07.JPG", "/images/questions/07/08.JPG", "/images/questions/15.gif"]
 ]
 
 exports.answers = [1, 2, 4, 3, 1, 2, 2];
