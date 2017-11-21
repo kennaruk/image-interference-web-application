@@ -34,71 +34,30 @@ router.get('/test', function(req, res, next) {
 });
 
 var variables = require('../db/variables');
-var payload = {
-  "page": "ล็อคอิน",
-  "info": {
-    "login": false,
-    "faculty": "",
-    "age": 0,
-    "gender": ""
-  },
-  "trial": [
-    // 1, 2
-  ],
-  "images": variables.images,
-  "answers_images": variables.answers_images,
-  "answers": variables.answers
-};
+
 
 router.post('/getImage', auth, function(req, res, next) {
   var trial_no = req.body.trial_no;  
-  res.json({success: true, data: payload.images[trial_no]});
+  res.json({success: true, data: req.session.payload.images[trial_no]});
 });
 
 router.post('/answer', auth, function(req, res, next) {
   var trial_no = req.body.trial_no;  
-  res.render('answer.ejs', { payload: payload, answers_images: payload.answers_images[trial_no], trial_no: trial_no });  
+  res.render('answer.ejs', { payload: req.session.payload, answers_images: req.session.payload.answers_images[trial_no], trial_no: trial_no });  
 });
 
 var payloadUpdate = (page) => {
   return function(req, res, next) {
-    payload.page = page;
-    payload.info.login = req.session.login;
-    payload.info.faculty = req.session.faculty;
-    payload.info.age = req.session.age;
-    payload.info.gender = req.session.gender;
+    req.session.payload.page = page;
+    req.session.payload.info.login = req.session.login;
+    req.session.payload.info.faculty = req.session.faculty;
+    req.session.payload.info.age = req.session.age;
+    req.session.payload.info.gender = req.session.gender;
     next();
   }
 }
-
-/* GET home page. */
-router.get('/', payloadUpdate('ล็อคอิน'),indexAuth , function(req, res, next) {
-  res.render('index.ejs', {payload: payload});
-});
-
-router.post('/login', function(req, res, next) {
-  var faculty = req.body.faculty,
-  age = req.body.age,
-  gender = req.body.gender;
-  
-  if(faculty === '' || age === '' || gender === '') {
-    res.json({"success": false, "msg": "กรอกข้อมูลผิดพลาด กรุณากรอกข้อมูลให้ถูกต้อง"});    
-  } else {
-    req.session.login = true;
-    req.session.faculty = req.body.faculty;
-    req.session.age = req.body.age;
-    req.session.gender  = req.body.gender;
-    res.json({"success": true, "msg": "login success"});
-  }
-});
-
-router.get('/index', function(req, res, next) {
-  res.render('index.ejs', { title: 'Express' });
-});
-
-router.get('/logout', function(req, res, next) {
-  req.session.destroy();
-  payload = {
+var initPayload = (req, res, next) => {
+  req.session.payload = {
     "page": "ล็อคอิน",
     "info": {
       "login": false,
@@ -113,21 +72,80 @@ router.get('/logout', function(req, res, next) {
     "answers_images": variables.answers_images,
     "answers": variables.answers
   };
+  next();
+}
+/* GET home page. */
+router.get('/', initPayload, payloadUpdate('ล็อคอิน'), indexAuth, function(req, res, next) {
+  res.render('index.ejs', {payload: req.session.payload});
+});
+
+router.post('/login', function(req, res, next) {
+  var faculty = req.body.faculty,
+  age = req.body.age,
+  gender = req.body.gender;
+  
+  if(faculty === '' || age === '' || gender === '') {
+    res.json({"success": false, "msg": "กรอกข้อมูลผิดพลาด กรุณากรอกข้อมูลให้ถูกต้อง"});    
+  } else {
+    req.session.login = true;
+    req.session.faculty = req.body.faculty;
+    req.session.age = req.body.age;
+    req.session.gender  = req.body.gender;
+    req.session.payload = {
+      "page": "ล็อคอิน",
+      "info": {
+        "login": false,
+        "faculty": "",
+        "age": 0,
+        "gender": ""
+      },
+      "trial": [
+        // 1, 2
+      ],
+      "images": variables.images,
+      "answers_images": variables.answers_images,
+      "answers": variables.answers
+    };
+    res.json({"success": true, "msg": "login success"});
+  }
+});
+
+router.get('/index', function(req, res, next) {
+  res.render('index.ejs', { title: 'Express' });
+});
+
+router.get('/logout', function(req, res, next) {
+  req.session.destroy();
+  req.session.payload = {
+    "page": "ล็อคอิน",
+    "info": {
+      "login": false,
+      "faculty": "",
+      "age": 0,
+      "gender": ""
+    },
+    "trial": [
+      
+    ],
+    "images": variables.images,
+    "answers_images": variables.answers_images,
+    "answers": variables.answers
+  };
   res.redirect('/');
 });
 
 router.get('/trial', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
-  res.render('trial.ejs', { payload: payload });
+  res.render('trial.ejs', { payload: req.session.payload });
 });
 
 router.get('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
-  res.render('image-changing.ejs', { payload: payload, trial_no: req.params.number-1 });
+  res.render('image-changing.ejs', { payload: req.session.payload, trial_no: req.params.number-1 });
 });
 
 router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
   var answer = req.body.answer;
   var trial_no = req.params.number;
-  payload.trial.push(trial_no);
+  req.session.payload.trial.push(trial_no);
   var values = [ [
       req.session.faculty,
       req.session.age,
@@ -135,7 +153,7 @@ router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, f
       parseInt(trial_no)+1
     ]
   ]
-  if(answer == payload.answers[trial_no]) {
+  if(answer == req.session.payload.answers[trial_no]) {
     values[0].push('ถูก');
     sheets.submit(values, (err) => {
       if(!err)
@@ -151,11 +169,11 @@ router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, f
 });
 
 router.get('/instruction', payloadUpdate('การทดสอบ'), function(req, res, next) {
-  res.render('instruction.ejs', { payload: payload });
+  res.render('instruction.ejs', { payload: req.session.payload });
 });
 
 router.get('/image-changing', payloadUpdate('การทดสอบ'), function(req, res, next) {
-  res.render('image-changing.ejs', { payload: payload, trial_no: 0 });
+  res.render('image-changing.ejs', { payload: req.session.payload, trial_no: 0 });
 });
 
 router.post('/image', function(req, res, next) {
