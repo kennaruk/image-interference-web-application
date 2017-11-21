@@ -24,10 +24,10 @@ exports.images = [
       "/images/questions/05/07.jpg", "/images/questions/05/08.jpg", "/images/questions/05/09.jpg",
       "/images/questions/05/10.jpg"],
 
-     ["/images/questions/06/01.jpg", "/images/questions/06/02.jpg", "/images/questions/06/03.jpg",
-      "/images/questions/06/04.jpg", "/images/questions/06/05.jpg", "/images/questions/06/06.jpg",
-      "/images/questions/06/07.jpg", "/images/questions/06/08.jpg", "/images/questions/06/09.jpg",
-      "/images/questions/06/10.jpg"],
+     ["/images/questions/06/01.JPG", "/images/questions/06/02.JPG", "/images/questions/06/03.JPG",
+      "/images/questions/06/04.JPG", "/images/questions/06/05.JPG", "/images/questions/06/06.JPG",
+      "/images/questions/06/07.JPG", "/images/questions/06/08.JPG", "/images/questions/06/09.JPG",
+      "/images/questions/06/10.JPG"],
 
       ["/images/questions/07/01.JPG", "/images/questions/07/02.JPG", "/images/questions/07/03.JPG",
        "/images/questions/07/04.JPG", "/images/questions/07/05.JPG"]
