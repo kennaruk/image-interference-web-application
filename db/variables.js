@@ -14,20 +14,20 @@ exports.images = [
       "/images/questions/03/07.JPG", "/images/questions/03/08.JPG", "/images/questions/03/09.JPG",
       "/images/questions/03/10.JPG"],
 
-     ["/images/questions/04/01.JPG", "/images/questions/04/02.JPG", "/images/questions/04/03.JPG",
-      "/images/questions/04/04.JPG", "/images/questions/04/05.JPG", "/images/questions/04/06.JPG",
-      "/images/questions/04/07.JPG", "/images/questions/04/08.JPG", "/images/questions/04/09.JPG",
-      "/images/questions/04/10.JPG"],
+     ["/images/questions/04/01.jpg", "/images/questions/04/02.jpg", "/images/questions/04/03.jpg",
+      "/images/questions/04/04.jpg", "/images/questions/04/05.jpg", "/images/questions/04/06.jpg",
+      "/images/questions/04/07.jpg", "/images/questions/04/08.jpg", "/images/questions/04/09.jpg",
+      "/images/questions/04/10.jpg"],
 
-     ["/images/questions/05/01.JPG", "/images/questions/05/02.JPG", "/images/questions/05/03.JPG",
-      "/images/questions/05/04.JPG", "/images/questions/05/05.JPG", "/images/questions/05/06.JPG",
-      "/images/questions/05/07.JPG", "/images/questions/05/08.JPG", "/images/questions/05/09.JPG",
-      "/images/questions/05/10.JPG"],
+     ["/images/questions/05/01.jpg", "/images/questions/05/02.jpg", "/images/questions/05/03.jpg",
+      "/images/questions/05/04.jpg", "/images/questions/05/05.jpg", "/images/questions/05/06.jpg",
+      "/images/questions/05/07.jpg", "/images/questions/05/08.jpg", "/images/questions/05/09.jpg",
+      "/images/questions/05/10.jpg"],
 
-     ["/images/questions/06/01.JPG", "/images/questions/06/02.JPG", "/images/questions/06/03.JPG",
-      "/images/questions/06/04.JPG", "/images/questions/06/05.JPG", "/images/questions/06/06.JPG",
-      "/images/questions/06/07.JPG", "/images/questions/06/08.JPG", "/images/questions/06/09.JPG",
-      "/images/questions/06/10.JPG"],
+     ["/images/questions/06/01.jpg", "/images/questions/06/02.jpg", "/images/questions/06/03.jpg",
+      "/images/questions/06/04.jpg", "/images/questions/06/05.jpg", "/images/questions/06/06.jpg",
+      "/images/questions/06/07.jpg", "/images/questions/06/08.jpg", "/images/questions/06/09.jpg",
+      "/images/questions/06/10.jpg"],
 
       ["/images/questions/07/01.JPG", "/images/questions/07/02.JPG", "/images/questions/07/03.JPG",
        "/images/questions/07/04.JPG", "/images/questions/07/05.JPG"]
@@ -41,9 +41,9 @@ exports.answers_images = [
 
     ["/images/questions/03/12.JPG", "/images/questions/03/11.JPG", "/images/questions/03/13.JPG", "/images/questions/03/02.JPG", "/images/questions/15.gif"],
 
-    ["/images/questions/04/12.JPG", "/images/questions/04/11.JPG", "/images/questions/04/04.JPG", "/images/questions/04/13.JPG", "/images/questions/15.gif"],
+    ["/images/questions/04/12.jpg", "/images/questions/04/11.jpg", "/images/questions/04/04.jpg", "/images/questions/04/13.jpg", "/images/questions/15.gif"],
 
-    ["/images/questions/05/04.JPG", "/images/questions/05/11.JPG", "/images/questions/05/12.JPG", "/images/questions/05/13.JPG", "/images/questions/15.gif"],
+    ["/images/questions/05/04.jpg", "/images/questions/05/11.jpg", "/images/questions/05/12.jpg", "/images/questions/05/13.jpg", "/images/questions/15.gif"],
 
     ["/images/questions/06/11.JPG", "/images/questions/06/04.JPG", "/images/questions/06/12.JPG", "/images/questions/06/13.JPG", "/images/questions/15.gif"],
 
