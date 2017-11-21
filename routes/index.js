@@ -118,21 +118,6 @@ router.get('/index', function(req, res, next) {
 
 router.get('/logout', function(req, res, next) {
   req.session.destroy();
-  req.session.payload = {
-    "page": "ล็อคอิน",
-    "info": {
-      "login": false,
-      "faculty": "",
-      "age": 0,
-      "gender": ""
-    },
-    "trial": [
-      
-    ],
-    "images": variables.images,
-    "answers_images": variables.answers_images,
-    "answers": variables.answers
-  };
   res.redirect('/');
 });
 
