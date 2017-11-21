@@ -57,21 +57,23 @@ var payloadUpdate = (page) => {
   }
 }
 var initPayload = (req, res, next) => {
-  req.session.payload = {
-    "page": "ล็อคอิน",
-    "info": {
-      "login": false,
-      "faculty": "",
-      "age": 0,
-      "gender": ""
-    },
-    "trial": [
-      // 1, 2
-    ],
-    "images": variables.images,
-    "answers_images": variables.answers_images,
-    "answers": variables.answers
-  };
+  if(!req.session.login) {
+    req.session.payload = {
+      "page": "ล็อคอิน",
+      "info": {
+        "login": false,
+        "faculty": "",
+        "age": 0,
+        "gender": ""
+      },
+      "trial": [
+        // 1, 2
+      ],
+      "images": variables.images,
+      "answers_images": variables.answers_images,
+      "answers": variables.answers
+    };
+  }
   next();
 }
 /* GET home page. */

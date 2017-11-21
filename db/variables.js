@@ -45,7 +45,7 @@ exports.answers_images = [
 
     ["/images/questions/05/04.jpg", "/images/questions/05/11.jpg", "/images/questions/05/12.jpg", "/images/questions/05/13.jpg", "/images/questions/15.gif"],
 
-    ["/images/questions/06/11.JPG", "/images/questions/06/04.JPG", "/images/questions/06/12.JPG", "/images/questions/06/13.JPG", "/images/questions/15.gif"],
+    ["/images/questions/06/11.JPG", "/images/questions/06/05.JPG", "/images/questions/06/12.JPG", "/images/questions/06/13.JPG", "/images/questions/15.gif"],
 
     ["/images/questions/07/06.JPG", "/images/questions/07/02.JPG", "/images/questions/07/07.JPG", "/images/questions/07/08.JPG", "/images/questions/15.gif"]
 ]
