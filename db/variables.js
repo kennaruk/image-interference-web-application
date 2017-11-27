@@ -129,15 +129,15 @@ exports.answers_images = [
 
     ["/images/01-02/Choices/1.gif", "/images/01-02/Choices/answer.gif", "/images/01-02/Choices/2.gif", "/images/01-02/Choices/3.gif"],
 
-    ["/images/01-03/Choices/answer.JPG", "/images/01-03/Choices/1.JPG", "/images/01-02/Choices/2.JPG", "/images/01-02/Choices/3.JPG"],
+    ["/images/01-03/Choices/answer.JPG", "/images/01-03/Choices/1.JPG", "/images/01-03/Choices/2.JPG", "/images/01-03/Choices/3.JPG"],
 
     ["/images/01-04/Choices/1.gif", "/images/01-04/Choices/3.gif", "/images/01-04/Choices/2.gif", "/images/01-04/Choices/answer.gif"],
 
     ["/images/02-01/Choices/1.gif", "/images/02-01/Choices/2.gif", "/images/02-01/Choices/answer.gif", "/images/02-01/Choices/3.gif"],
 
-    ["/images/02-02/Choices/1.gif", "/images/02-02/Choices/answer.gif", "/images/02-02/Choices/2.gif", "/images/02-02/Choices/3.gif"],
+    ["/images/02-02/Choices/1.gif", "/images/02-02/Choices/answer.gif", "/images/02-02/Choices/3.gif", "/images/02-02/Choices/4.gif"],
 
-    ["/images/02-03/Choices/answer.JPG", "/images/02-03/Choices/1.JPG", "/images/02-02/Choices/2.JPG", "/images/02-02/Choices/3.JPG"],
+    ["/images/02-03/Choices/answer.JPG", "/images/02-03/Choices/1.JPG", "/images/02-03/Choices/2.JPG", "/images/02-03/Choices/3.JPG"],
 
     ["/images/02-04/Choices/1.gif", "/images/02-04/Choices/3.gif", "/images/02-04/Choices/2.gif", "/images/02-04/Choices/answer.gif"],
 
