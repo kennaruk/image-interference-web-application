@@ -12,18 +12,19 @@
   <div class="container">
 
   <div class="row" style="height:60vh;">
+
       <div class="align-self-center col-md-6 text-white">
-        <h1 class="text-white text-center">การทดลอง การจดจำภาพ</h1>                    
-        <p class="">
-          <br>วิธีการทดลอง
-          <br>1) จะมีภาพแสดงขึ้นมาให้จำในตอนแรก
-          <br>2) จะมีภาพแสดงขึ้นมา 4 ภาพเพื่อให้เลือกว่าภาพใด อยู่ในภาพที่แสดงในตอนแรก
-        </p>
-        <div class=" col-md-12 p-3">
-            <a id="trial-7" class="btn btn-secondary w-100" href="/trial/7/1">ทดลอง ทดสอบ</a>
-          </div>
-      </div>
-      
+          <h1 class="text-white text-center">การทดลอง การจดจำภาพ</h1>                    
+          <p class="">
+            <br>วิธีการทดลอง
+            <br>1) จะมีภาพแสดงขึ้นมาให้จำในตอนแรก
+            <br>2) จะมีภาพแสดงขึ้นมา 4 ภาพเพื่อให้เลือกว่าภาพใด อยู่ในภาพที่แสดงในตอนแรก
+          </p>
+          <div class=" col-md-12 p-3">
+              <a id="trial-7" class="btn btn-secondary w-100" href="/trial/7/1">ทดลอง ทดสอบ</a>
+            </div>
+        </div>
+
       <div class="col-md-6">
           <div class="col-md-12 p-3 bg-primary"> 
               <h1 class="text-white text-center">เลือกการทดลอง</h1>          
@@ -48,7 +49,7 @@
     var aTrial = [$('#trial-1'), $('#trial-2'), $('#trial-3'),
     $('#trial-4'), $('#trial-5'), $('#trial-6')];
     var baseUrl = window.location.href;
-
+    $('#trial-example').attr('href', baseUrl+'/example');
     var index = 1;
     aTrial.forEach((trial) => {
       trial.attr('href', baseUrl+'/'+index);

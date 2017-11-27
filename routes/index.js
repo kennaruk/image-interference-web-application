@@ -132,9 +132,19 @@ router.get('/trial/:number', payloadUpdate('การทดสอบ'), auth, fu
 });
 
 router.get('/trial/:experimentNo/:trialNo', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
-  var experimentNo = parseInt(req.params.experimentNo)-1,
-  trialNo = parseInt(req.params.trialNo)-1,
-  sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+  var experimentNo,
+  trialNo,
+  sumNo;
+
+  if(req.params.trialNo == "example") {
+    experimentNo = parseInt(6);    
+    trialNo = parseInt(0);
+    sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+  } else {
+    experimentNo = parseInt(req.params.experimentNo)-1,
+    trialNo = parseInt(req.params.trialNo)-1,
+    sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+  }
 
   var str = "experimentNo: "+experimentNo+" trialNo: "+trialNo+ " +:"+ sumNo;
   // console.log('str: ', str);
@@ -147,11 +157,20 @@ router.post('/trial/:experimentNo/:trialNo', payloadUpdate('การทดส�
   var time = req.body.time;
   // console.log('experiment post called')
 
-  var experimentNo = parseInt(req.params.experimentNo)-1,
-  trialNo = parseInt(req.params.trialNo)-1,
-  sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
-  // console.log('sumNo: ', sumNo);
-  
+  var experimentNo,
+  trialNo,
+  sumNo;
+
+  if(req.params.trialNo == "example") {
+    experimentNo = parseInt(6);    
+    trialNo = parseInt(0);
+    sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+  } else {
+    experimentNo = parseInt(req.params.experimentNo)-1,
+    trialNo = parseInt(req.params.trialNo)-1,
+    sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+  }
+
   var experimentText = "หมวดการทดลองที่ " + (experimentNo+1);
   // console.log('experimentText: ', experimentText);
   var trialText = "การทดลองที่ " + (trialNo+1);
