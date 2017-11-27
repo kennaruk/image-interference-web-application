@@ -6,21 +6,24 @@
 </div>
 
 <div class="row" style="height:50vh; ">
-    <div class="bg-primary col-md-1 p-3"> <br> <br> </div>
       
-  <div class="bg-primary col-md-2 p-3"> <br> <br>
-    <img id="answer-1" class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers_images[0] %>"> </div>
-  <div class="bg-primary col-md-2 p-3"> <br> <br>
-    <img id="answer-2" class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers_images[1] %>"> </div>
-  <div class="bg-primary col-md-2 p-3"> <br> <br>
-    <img id="answer-3" class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers_images[2] %>"> </div>
-  <div class="bg-primary col-md-2 p-3"> <br> <br>
-    <img id="answer-4" class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers_images[3] %>"> </div>
-  <div class="bg-primary col-md-2 p-3"> <br> <br>
-    <img id="answer-5" class="d-block img-fluid img-thumbnail mx-auto h-75 w-100" src="<%= answers_images[4] %>"> </div>
+  <div class="bg-primary col-md-3 p-3"> <br> <br>
+    <img id="answer-1" class="d-block img-fluid img-thumbnail mx-auto h-75 w-75" src="<%= answers_images[0] %>"> </div>
+  <div class="bg-primary col-md-3 p-3"> <br> <br>
+    <img id="answer-2" class="d-block img-fluid img-thumbnail mx-auto h-75 w-75" src="<%= answers_images[1] %>"> </div>
+  <div class="bg-primary col-md-3 p-3"> <br> <br>
+    <img id="answer-3" class="d-block img-fluid img-thumbnail mx-auto h-75 w-75" src="<%= answers_images[2] %>"> </div>
+  <div class="bg-primary col-md-3 p-3"> <br> <br>
+    <img id="answer-4" class="d-block img-fluid img-thumbnail mx-auto h-75 w-75" src="<%= answers_images[3] %>"> </div>
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+  var time = 0;
+  timeIncrease = () => {
+    time++;
+  }
+  setInterval(timeIncrease(), 1000);
   $('#answer-1').click(() => {
     sendAnswer(1);
   });
@@ -36,29 +39,36 @@
   $('#answer-5').click(() => {
     sendAnswer(5);
   });
+
+  var baseUrl = window.location.href;
+  console.log('baseUrl: ', baseUrl);
+  var backUrl = "/";
+  var splitUrl = baseUrl.split('/');
+  for(var i = 3 ; i < 5 ; i++) {
+    backUrl += baseUrl.split('/')[i];
+    if(i != 4)
+      backUrl += "/";
+  }
+
   function sendAnswer(choice) {
 
     swal("รอสักครู่ระบบกำลังตรวจสอบคำตอบ", {
       button: false,
     });
-    
+
     $.ajax({
-      url: '/trial/<%= trial_no %>',
+      url: baseUrl,
       type: 'POST',
       data: {
-        trial_no: <%= trial_no %>,
-        answer: choice
+        answer: choice,
+        time: time
       },
       success: (payload) => {
-        if(payload) 
-          swal("ถูก", "ยินดีด้วย คุณความจำเป็นเลิศ ไปต่อเลย!", "success").then(() => {
-            window.location.href = '/trial';
-          });
-        else
-          swal("ผิด", "เสียใจด้วย โอกาสหน้าลองใหม่นะ", "error").then(() => {
-            window.location.href = '/trial';
-          });
+        swal('เรียบร้อย กด OK เพื่อไปทำการทดสอบอื่น').then(() => {
+          window.location.href = backUrl;
+        });
       }
     });
+
   }
 </script>

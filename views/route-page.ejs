@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include head.ejs %>
+</head>
+
+<body>
+  <% include header.ejs %>
+
+  <div class="py-5 bg-primary text-light w-100 h-75">
+  <div class="container">
+
+  <div class="row" style="height:60vh;">
+      <div class="align-self-center col-md-6 text-white">
+        <h1 class="text-white text-center">กรุณารอให้สต๊าฟทำการเลือกหมวดการทดลองให้ท่าน</h1>                    
+        <p class="">
+          
+        </p>
+      </div>
+      
+      <div class="col-md-6">
+          <div class="col-md-12 p-3 bg-primary"> 
+              <h1 class="text-white text-center">เลือกการทดลอง</h1>          
+          </div>                        
+          <% for(var i = 1, n = 6; i <= n; i++) { %>
+            <div class="row" style="height:<%=60.0/(n+1)%>vh;">
+              <div class="bg-secondary col-md-12 p-3">
+                <a class="btn btn-primary w-100" href="/trial/<%=i%>">หมวดการทดลองที่ <%=i%></a>
+              </div>
+            </div>
+          <% } %>
+      </div>
+  </div>
+
+  </div>
+  </div>
+
+  <% include footer.ejs %>
+  <% include script.ejs %>

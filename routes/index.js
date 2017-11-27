@@ -81,7 +81,7 @@ router.get('/', initPayload, payloadUpdate('ล็อคอิน'), indexAuth, 
   res.render('index.ejs', {payload: req.session.payload});
 });
 
-router.post('/login', function(req, res, next) {
+router.post('/login', initPayload, function(req, res, next) {
   var faculty = req.body.faculty,
   age = req.body.age,
   gender = req.body.gender;
@@ -122,11 +122,70 @@ router.get('/logout', function(req, res, next) {
 });
 
 router.get('/trial', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
-  res.render('trial.ejs', { payload: req.session.payload });
+  // res.render('trial.ejs', { payload: req.session.payload });
+  res.render('route-page.ejs', { payload: req.session.payload });
 });
 
 router.get('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
-  res.render('image-changing.ejs', { payload: req.session.payload, trial_no: req.params.number-1 });
+  res.render('trial.ejs', { payload: req.session.payload });
+  // res.render('image-changing.ejs', { payload: req.session.payload, trial_no: req.params.number-1 });
+});
+
+router.get('/trial/:experimentNo/:trialNo', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+  var experimentNo = parseInt(req.params.experimentNo)-1,
+  trialNo = parseInt(req.params.trialNo)-1,
+  sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+
+  var str = "experimentNo: "+experimentNo+" trialNo: "+trialNo+ " +:"+ sumNo;
+  // console.log('str: ', str);
+  // res.send({str: str});
+  res.render('image-changing.ejs', { payload: req.session.payload, trial_no: sumNo });
+});
+
+router.post('/trial/:experimentNo/:trialNo', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {
+  var answer = req.body.answer;
+  var time = req.body.time;
+  // console.log('experiment post called')
+
+  var experimentNo = parseInt(req.params.experimentNo)-1,
+  trialNo = parseInt(req.params.trialNo)-1,
+  sumNo = parseInt(experimentNo)*4 + parseInt(trialNo);
+  // console.log('sumNo: ', sumNo);
+  
+  var experimentText = "หมวดการทดลองที่ " + (experimentNo+1);
+  // console.log('experimentText: ', experimentText);
+  var trialText = "การทดลองที่ " + (trialNo+1);
+  // console.log('trialText: ', trialText);
+  
+  var values = [ [
+    req.session.faculty,
+    req.session.age,
+    req.session.gender,
+    experimentText,
+    trialText
+    ]
+  ];
+
+  // console.log('value: ', values);
+  // console.log('req.session.payload.answers[sumNo]: ', req.session.payload.answers[sumNo]);
+  if(answer == req.session.payload.answers[sumNo]) {
+    values[0].push('ถูก');
+    values[0].push(time);
+
+    sheets.submit(values, (err) => {
+      if(!err)
+        res.send(true);
+    });
+  } else {
+    values[0].push('ผิด');
+    values[0].push(time);
+    
+    sheets.submit(values, (err) => {
+      if(!err)
+        res.send(false);
+    });
+  }
+
 });
 
 router.post('/trial/:number', payloadUpdate('การทดสอบ'), auth, function(req, res, next) {

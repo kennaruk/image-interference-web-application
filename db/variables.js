@@ -1,53 +1,180 @@
+
 exports.images = [
-    ["/images/questions/01/01.JPG", "/images/questions/01/02.JPG", "/images/questions/01/03.JPG",
-     "/images/questions/01/04.JPG", "/images/questions/01/05.JPG", "/images/questions/01/06.JPG",
-     "/images/questions/01/07.JPG", "/images/questions/01/08.JPG", "/images/questions/01/09.JPG",
-     "/images/questions/01/10.JPG"],
-     
-     ["/images/questions/02/01.JPG", "/images/questions/02/02.JPG", "/images/questions/02/03.JPG",
-      "/images/questions/02/04.JPG", "/images/questions/02/05.JPG", "/images/questions/02/06.JPG",
-      "/images/questions/02/07.JPG", "/images/questions/02/08.JPG", "/images/questions/02/09.JPG",
-      "/images/questions/02/10.JPG"],
+    ["/images/01-01/1.gif", "/images/01-01/2.gif", "/images/01-01/3.gif",
+     "/images/01-01/4.gif", "/images/01-01/5.gif", "/images/01-01/6.gif",
+     "/images/01-01/7.gif", "/images/01-01/8.gif", "/images/01-01/9.gif",
+     "/images/01-01/10.gif"],
 
-     ["/images/questions/03/01.JPG", "/images/questions/03/02.JPG", "/images/questions/03/03.JPG",
-      "/images/questions/03/04.JPG", "/images/questions/03/05.JPG", "/images/questions/03/06.JPG",
-      "/images/questions/03/07.JPG", "/images/questions/03/08.JPG", "/images/questions/03/09.JPG",
-      "/images/questions/03/10.JPG"],
+    ["/images/01-02/1.gif", "/images/01-02/2.gif", "/images/01-02/3.gif",
+     "/images/01-02/4.gif", "/images/01-02/5.gif", "/images/01-02/6.gif",
+     "/images/01-02/7.gif", "/images/01-02/8.gif", "/images/01-02/9.gif",
+     "/images/01-02/10.gif"],
 
-     ["/images/questions/04/01.jpg", "/images/questions/04/02.jpg", "/images/questions/04/03.jpg",
-      "/images/questions/04/04.jpg", "/images/questions/04/05.jpg", "/images/questions/04/06.jpg",
-      "/images/questions/04/07.jpg", "/images/questions/04/08.jpg", "/images/questions/04/09.jpg",
-      "/images/questions/04/10.jpg"],
+    ["/images/01-03/1.JPG", "/images/01-03/2.JPG", "/images/01-03/3.JPG",
+     "/images/01-03/4.JPG", "/images/01-03/5.JPG", "/images/01-03/6.JPG",
+     "/images/01-03/7.JPG", "/images/01-03/8.JPG", "/images/01-03/9.JPG",
+     "/images/01-03/10.JPG"],
 
-     ["/images/questions/05/01.jpg", "/images/questions/05/02.jpg", "/images/questions/05/03.jpg",
-      "/images/questions/05/04.jpg", "/images/questions/05/05.jpg", "/images/questions/05/06.jpg",
-      "/images/questions/05/07.jpg", "/images/questions/05/08.jpg", "/images/questions/05/09.jpg",
-      "/images/questions/05/10.jpg"],
+    ["/images/01-04/1.gif", "/images/01-04/2.gif", "/images/01-04/3.gif",
+     "/images/01-04/4.gif", "/images/01-04/5.gif", "/images/01-04/6.gif",
+     "/images/01-04/7.gif", "/images/01-04/8.gif", "/images/01-04/9.gif",
+     "/images/01-04/10.gif"],
 
-     ["/images/questions/06/01.JPG", "/images/questions/06/02.JPG", "/images/questions/06/03.JPG",
-      "/images/questions/06/04.JPG", "/images/questions/06/05.JPG", "/images/questions/06/06.JPG",
-      "/images/questions/06/07.JPG", "/images/questions/06/08.JPG", "/images/questions/06/09.JPG",
-      "/images/questions/06/10.JPG"],
+    ["/images/02-01/1.gif", "/images/02-01/2.gif", "/images/02-01/3.gif",
+     "/images/02-01/4.gif", "/images/02-01/5.gif", "/images/02-01/6.gif",
+     "/images/02-01/7.gif", "/images/02-01/8.gif", "/images/02-01/9.gif",
+     "/images/02-01/10.gif"],
 
-      ["/images/questions/07/01.JPG", "/images/questions/07/02.JPG", "/images/questions/07/03.JPG",
-       "/images/questions/07/04.JPG", "/images/questions/07/05.JPG"]
+    ["/images/02-02/1.gif", "/images/02-02/2.gif", "/images/02-02/3.gif",
+     "/images/02-02/4.gif", "/images/02-02/5.gif", "/images/02-02/6.gif",
+     "/images/02-02/7.gif", "/images/02-02/8.gif", "/images/02-02/9.gif",
+     "/images/02-02/10.gif"],
+
+    ["/images/02-03/1.JPG", "/images/02-03/2.JPG", "/images/02-03/3.JPG",
+     "/images/02-03/4.JPG", "/images/02-03/5.JPG", "/images/02-03/6.JPG",
+     "/images/02-03/7.JPG", "/images/02-03/8.JPG", "/images/02-03/9.JPG",
+     "/images/02-03/10.JPG"],
+
+    ["/images/02-04/1.gif", "/images/02-04/2.gif", "/images/02-04/3.gif",
+     "/images/02-04/4.gif", "/images/02-04/5.gif", "/images/02-04/6.gif",
+     "/images/02-04/7.gif", "/images/02-04/8.gif", "/images/02-04/9.gif",
+     "/images/02-04/10.gif"],
+
+    ["/images/03-01/1.gif", "/images/03-01/2.gif", "/images/03-01/3.gif",
+     "/images/03-01/4.gif", "/images/03-01/5.gif", "/images/03-01/6.gif",
+     "/images/03-01/7.gif", "/images/03-01/8.gif", "/images/03-01/9.gif",
+     "/images/03-01/10.gif"],
+
+    ["/images/03-02/1.gif", "/images/03-02/2.gif", "/images/03-02/3.gif",
+     "/images/03-02/4.gif", "/images/03-02/5.gif", "/images/03-02/6.gif",
+     "/images/03-02/7.gif", "/images/03-02/8.gif", "/images/03-02/9.gif",
+     "/images/03-02/10.gif"],
+
+    ["/images/03-03/1.JPG", "/images/03-03/2.JPG", "/images/03-03/3.JPG",
+     "/images/03-03/4.JPG", "/images/03-03/5.JPG", "/images/03-03/6.JPG",
+     "/images/03-03/7.JPG", "/images/03-03/8.JPG", "/images/03-03/9.JPG",
+     "/images/03-03/10.JPG"],
+
+    ["/images/03-04/1.gif", "/images/03-04/2.gif", "/images/03-04/3.gif",
+     "/images/03-04/4.gif", "/images/03-04/5.gif", "/images/03-04/6.gif",
+     "/images/03-04/7.gif", "/images/03-04/8.gif", "/images/03-04/9.gif",
+     "/images/03-04/10.gif"],
+
+    ["/images/04-01/1.JPG", "/images/04-01/2.JPG", "/images/04-01/3.JPG",
+     "/images/04-01/4.JPG", "/images/04-01/5.JPG", "/images/04-01/6.JPG",
+     "/images/04-01/7.JPG", "/images/04-01/8.JPG", "/images/04-01/9.JPG",
+     "/images/04-01/10.JPG"],
+
+    ["/images/04-02/1.gif", "/images/04-02/2.gif", "/images/04-02/3.gif",
+     "/images/04-02/4.gif", "/images/04-02/5.gif", "/images/04-02/6.gif",
+     "/images/04-02/7.gif", "/images/04-02/8.gif", "/images/04-02/9.gif",
+     "/images/04-02/10.gif"],
+
+    ["/images/04-03/1.JPG", "/images/04-03/2.JPG", "/images/04-03/3.JPG",
+     "/images/04-03/4.JPG", "/images/04-03/5.JPG", "/images/04-03/6.JPG",
+     "/images/04-03/7.JPG", "/images/04-03/8.JPG", "/images/04-03/9.JPG",
+     "/images/04-03/10.JPG"],
+
+    ["/images/04-04/1.gif", "/images/04-04/2.gif", "/images/04-04/3.gif",
+     "/images/04-04/4.gif", "/images/04-04/5.gif", "/images/04-04/6.gif",
+     "/images/04-04/7.gif", "/images/04-04/8.gif", "/images/04-04/9.gif",
+     "/images/04-04/10.gif"],
+
+    ["/images/05-01/1.JPG", "/images/05-01/2.JPG", "/images/05-01/3.JPG",
+     "/images/05-01/4.JPG", "/images/05-01/5.JPG", "/images/05-01/6.JPG",
+     "/images/05-01/7.JPG", "/images/05-01/8.JPG", "/images/05-01/9.JPG",
+     "/images/05-01/10.JPG"],
+    
+    ["/images/05-02/1.gif", "/images/05-02/2.gif", "/images/05-02/3.gif",
+     "/images/05-02/4.gif", "/images/05-02/5.gif", "/images/05-02/6.gif",
+     "/images/05-02/7.gif", "/images/05-02/8.gif", "/images/05-02/9.gif",
+     "/images/05-02/10.gif"],
+
+    ["/images/05-03/1.JPG", "/images/05-03/2.JPG", "/images/05-03/3.JPG",
+     "/images/05-03/4.JPG", "/images/05-03/5.JPG", "/images/05-03/6.JPG",
+     "/images/05-03/7.JPG", "/images/05-03/8.JPG", "/images/05-03/9.JPG",
+     "/images/05-03/10.JPG"],
+
+    ["/images/05-04/1.gif", "/images/05-04/2.gif", "/images/05-04/3.gif",
+     "/images/05-04/4.gif", "/images/05-04/5.gif", "/images/05-04/6.gif",
+     "/images/05-04/7.gif", "/images/05-04/8.gif", "/images/05-04/9.gif",
+     "/images/05-04/10.gif"],
+
+    ["/images/06-01/1.JPG", "/images/06-01/2.JPG", "/images/06-01/3.JPG",
+     "/images/06-01/4.JPG", "/images/06-01/5.JPG", "/images/06-01/6.JPG",
+     "/images/06-01/7.JPG", "/images/06-01/8.JPG", "/images/06-01/9.JPG",
+     "/images/06-01/10.JPG"],
+    
+    ["/images/06-02/1.gif", "/images/06-02/2.gif", "/images/06-02/3.gif",
+     "/images/06-02/4.gif", "/images/06-02/5.gif", "/images/06-02/6.gif",
+     "/images/06-02/7.gif", "/images/06-02/8.gif", "/images/06-02/9.gif",
+     "/images/06-02/10.gif"],
+
+    ["/images/06-03/1.JPG", "/images/06-03/2.JPG", "/images/06-03/3.JPG",
+     "/images/06-03/4.JPG", "/images/06-03/5.JPG", "/images/06-03/6.JPG",
+     "/images/06-03/7.JPG", "/images/06-03/8.JPG", "/images/06-03/9.JPG",
+     "/images/06-03/10.JPG"],
+
+    ["/images/06-04/1.gif", "/images/06-04/2.gif", "/images/06-04/3.gif",
+     "/images/06-04/4.gif", "/images/06-04/5.gif", "/images/06-04/6.gif",
+     "/images/06-04/7.gif", "/images/06-04/8.gif", "/images/06-04/9.gif",
+     "/images/06-04/10.gif"]
 ]
 
 exports.answers_images = [
+    ["/images/01-01/Choices/1.gif", "/images/01-01/Choices/2.gif", "/images/01-01/Choices/answer.gif", "/images/01-01/Choices/3.gif"],
 
-    ["/images/questions/01/03.JPG", "/images/questions/01/11.JPG", "/images/questions/01/12.JPG", "/images/questions/01/13.JPG", "/images/questions/15.gif"],
+    ["/images/01-02/Choices/1.gif", "/images/01-02/Choices/answer.gif", "/images/01-02/Choices/2.gif", "/images/01-02/Choices/3.gif"],
 
-    ["/images/questions/02/11.JPG", "/images/questions/02/03.JPG", "/images/questions/02/14.JPG", "/images/questions/02/15.png", "/images/questions/15.gif"],
+    ["/images/01-03/Choices/answer.JPG", "/images/01-03/Choices/1.JPG", "/images/01-02/Choices/2.JPG", "/images/01-02/Choices/3.JPG"],
 
-    ["/images/questions/03/12.JPG", "/images/questions/03/11.JPG", "/images/questions/03/13.JPG", "/images/questions/03/02.JPG", "/images/questions/15.gif"],
+    ["/images/01-04/Choices/1.gif", "/images/01-04/Choices/3.gif", "/images/01-04/Choices/2.gif", "/images/01-04/Choices/answer.gif"],
 
-    ["/images/questions/04/12.jpg", "/images/questions/04/11.jpg", "/images/questions/04/04.jpg", "/images/questions/04/13.jpg", "/images/questions/15.gif"],
+    ["/images/02-01/Choices/1.gif", "/images/02-01/Choices/2.gif", "/images/02-01/Choices/answer.gif", "/images/02-01/Choices/3.gif"],
 
-    ["/images/questions/05/04.jpg", "/images/questions/05/11.jpg", "/images/questions/05/12.jpg", "/images/questions/05/13.jpg", "/images/questions/15.gif"],
+    ["/images/02-02/Choices/1.gif", "/images/02-02/Choices/answer.gif", "/images/02-02/Choices/2.gif", "/images/02-02/Choices/3.gif"],
 
-    ["/images/questions/06/11.JPG", "/images/questions/06/05.JPG", "/images/questions/06/12.JPG", "/images/questions/06/13.JPG", "/images/questions/15.gif"],
+    ["/images/02-03/Choices/answer.JPG", "/images/02-03/Choices/1.JPG", "/images/02-02/Choices/2.JPG", "/images/02-02/Choices/3.JPG"],
 
-    ["/images/questions/07/06.JPG", "/images/questions/07/02.JPG", "/images/questions/07/07.JPG", "/images/questions/07/08.JPG", "/images/questions/15.gif"]
+    ["/images/02-04/Choices/1.gif", "/images/02-04/Choices/3.gif", "/images/02-04/Choices/2.gif", "/images/02-04/Choices/answer.gif"],
+
+    ["/images/03-01/Choices/1.gif", "/images/03-01/Choices/2.gif", "/images/03-01/Choices/answer.gif", "/images/03-01/Choices/3.gif"],
+
+    ["/images/03-02/Choices/1.gif", "/images/03-02/Choices/answer.gif", "/images/03-02/Choices/2.gif", "/images/03-02/Choices/3.gif"],
+
+    ["/images/03-03/Choices/answer.JPG", "/images/03-03/Choices/1.JPG", "/images/03-03/Choices/2.JPG", "/images/03-03/Choices/3.JPG"],
+
+    ["/images/03-04/Choices/1.gif", "/images/03-04/Choices/3.gif", "/images/03-04/Choices/2.gif", "/images/03-04/Choices/answer.gif"],
+
+    ["/images/04-01/Choices/1.JPG", "/images/04-01/Choices/2.JPG", "/images/04-01/Choices/answer.JPG", "/images/04-01/Choices/3.JPG"],
+
+    ["/images/04-02/Choices/1.gif", "/images/04-02/Choices/answer.gif", "/images/04-02/Choices/2.gif", "/images/04-02/Choices/3.gif"],
+
+    ["/images/04-03/Choices/answer.JPG", "/images/04-03/Choices/1.JPG", "/images/04-03/Choices/2.JPG", "/images/04-03/Choices/3.JPG"],
+
+    ["/images/04-04/Choices/1.gif", "/images/04-04/Choices/3.gif", "/images/04-04/Choices/2.gif", "/images/04-04/Choices/answer.gif"],
+
+    ["/images/05-01/Choices/1.JPG", "/images/05-01/Choices/2.JPG", "/images/05-01/Choices/answer.JPG", "/images/05-01/Choices/3.JPG"],
+
+    ["/images/05-02/Choices/1.gif", "/images/05-02/Choices/answer.gif", "/images/05-02/Choices/2.gif", "/images/05-02/Choices/3.gif"],
+
+    ["/images/05-03/Choices/answer.JPG", "/images/05-03/Choices/1.JPG", "/images/05-03/Choices/2.JPG", "/images/05-03/Choices/3.JPG"],
+
+    ["/images/05-04/Choices/1.gif", "/images/05-04/Choices/3.gif", "/images/05-04/Choices/2.gif", "/images/05-04/Choices/answer.gif"],
+
+    ["/images/06-01/Choices/1.JPG", "/images/06-01/Choices/2.JPG", "/images/06-01/Choices/answer.JPG", "/images/06-01/Choices/3.JPG"],
+
+    ["/images/06-02/Choices/1.gif", "/images/06-02/Choices/answer.gif", "/images/06-02/Choices/2.gif", "/images/06-02/Choices/3.gif"],
+
+    ["/images/06-03/Choices/answer.JPG", "/images/06-03/Choices/1.JPG", "/images/06-03/Choices/2.JPG", "/images/06-03/Choices/3.JPG"],
+
+    ["/images/06-04/Choices/1.gif", "/images/06-04/Choices/3.gif", "/images/06-04/Choices/2.gif", "/images/06-04/Choices/answer.gif"]
+  
 ]
 
-exports.answers = [1, 2, 4, 3, 1, 2, 2];
+exports.answers = [3, 2, 1, 4,
+                   3, 2, 1, 4,
+                   3, 2, 1, 4,
+                   3, 2, 1, 4,
+                   3, 2, 1, 4,
+                   3, 2, 1, 4];
