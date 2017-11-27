@@ -28,7 +28,7 @@
           <div class="col-md-12 p-3 bg-primary"> 
               <h1 class="text-white text-center">เลือกการทดลอง</h1>          
           </div>                        
-          <% for(var i = 1, n = 6; i <= n; i++) { %>
+          <% for(var i = 1, n = 4; i <= n; i++) { %>
             <div class="row" style="height:<%=60.0/(n+1)%>vh;">
               <div class="bg-secondary col-md-12 p-3">
                 <a id="trial-<%=i%>" class="btn btn-primary w-100" href="/trial/<%=i%>">การทดลองที่ <%=i%></a>
@@ -46,7 +46,14 @@
   <script>
   $(() => {
     var aTrial = [$('#trial-1'), $('#trial-2'), $('#trial-3'),
-    $('#trial-4'), $('#trial-5'), $('#trial-6'), $('#trial-7')];
+    $('#trial-4'), $('#trial-5'), $('#trial-6')];
+    var baseUrl = window.location.href;
+
+    var index = 1;
+    aTrial.forEach((trial) => {
+      trial.attr('href', baseUrl+'/'+index);
+      index++;
+    })
 
     <% payload.trial.forEach((index) => { %> 
       aTrial[<%=index%>].attr('href', '#');
