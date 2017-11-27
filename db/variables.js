@@ -118,7 +118,10 @@ exports.images = [
     ["/images/06-04/1.gif", "/images/06-04/2.gif", "/images/06-04/3.gif",
      "/images/06-04/4.gif", "/images/06-04/5.gif", "/images/06-04/6.gif",
      "/images/06-04/7.gif", "/images/06-04/8.gif", "/images/06-04/9.gif",
-     "/images/06-04/10.gif"]
+     "/images/06-04/10.gif"],
+
+     ["/images/07-01/01.JPG", "/images/07-01/02.JPG", "/images/07-01/03.JPG",
+     "/images/07-01/04.JPG", "/images/07-01/05.JPG"]
 ]
 
 exports.answers_images = [
@@ -168,8 +171,10 @@ exports.answers_images = [
 
     ["/images/06-03/Choices/answer.JPG", "/images/06-03/Choices/1.JPG", "/images/06-03/Choices/2.JPG", "/images/06-03/Choices/3.JPG"],
 
-    ["/images/06-04/Choices/1.gif", "/images/06-04/Choices/3.gif", "/images/06-04/Choices/2.gif", "/images/06-04/Choices/answer.gif"]
+    ["/images/06-04/Choices/1.gif", "/images/06-04/Choices/3.gif", "/images/06-04/Choices/2.gif", "/images/06-04/Choices/answer.gif"],
   
+    ["/images/07-01/06.JPG", "/images/07-01/07.JPG", "/images/07-01/08.JPG", "/images/07-01/03.JPG"]
+    
 ]
 
 exports.answers = [3, 2, 1, 4,
@@ -177,4 +182,5 @@ exports.answers = [3, 2, 1, 4,
                    3, 2, 1, 4,
                    3, 2, 1, 4,
                    3, 2, 1, 4,
-                   3, 2, 1, 4];
+                   3, 2, 1, 4,
+                   4];
