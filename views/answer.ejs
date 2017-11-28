@@ -23,7 +23,7 @@
   timeIncrease = () => {
     time++;
   }
-  setInterval(timeIncrease(), 1000);
+  setInterval(timeIncrease, 1000);
   $('#answer-1').click(() => {
     sendAnswer(1);
   });
